@@ -1,0 +1,2 @@
+{ "file" : """\nimport time\nimport digital\nfrom machine import SoftI2C, Pin\ni2c = SoftI2C(scl=Pin(0), sda=Pin(16))\ndigital = digital.DIGITAL(i2c, 32)\noled = ssd1306.SSD1306_I2C(128, 64, i2c)\n\n\nwhile True:\n	digital.pin(1,1)\n	time.sleep(1)\n	digital.pin(1,0)\n	time.sleep(1)\n"""" }
+
